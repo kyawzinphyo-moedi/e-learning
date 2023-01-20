@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8">
+
+    <link href="../../static/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+          th:href="@{/bootstrap/css/bootstrap.min.css}">
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+    <link href="path/to/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <title>Title</title>
+
+</head>
+
+<body>
+
+<nav th:fragment="nav" class="navbar navbar-expand-md navbar-dark bg-dark text-light">
+    <div class="container">
+        <a href="#" class="navbar-brand">
+            <h3><i>E-Learning</i></h3>
+        </a>
+        <button type="button" class="navbar-toggler" data-target="#myNav" data-toggle="collapse" aria-label="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="#" th:href="@{/home}"><i class="bi bi-house-heart-fill">Home</i></a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="#" th:href="@{/course-form}"><i>Course</i></a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="#" th:href="@{/register-form}"><i
+                            class="bi bi-person-fill-add">Register</i></a>
+                </li>
+
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="#" th:href="@{/login}"><i>Login</i></a>
+                </li>
+
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="#" th:href="@{/about}"><i>About</i></a>
+                </li>
+
+                <li class="nav-item mr-3">
+                    <a class="nav-link" href="#"><i>Contact</i></a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+</nav>
+</body>
+</html>

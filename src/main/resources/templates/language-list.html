@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="../../static/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+          th:href="@{/bootstrap/css/bootstrap.min.css}">
+    <title>Title</title>
+</head>
+<body>
+<div th:replace="~{fragment/nav.html::nav}"></div>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center text-black-50"><i>Available Courses</i></h3>
+                </div>
+                <div class="card-body">
+                    <div th:replace="~{fragment/languageTable.html::languageTable}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

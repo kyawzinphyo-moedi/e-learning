@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="languageTable" class="container container-fluid">
+    <table class="table table-striped text-secondary">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Fees</th>
+            <th>Duration</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="lan:${language}">
+            <td th:text="${lan.name}"></td>
+            <td th:text="${lan.fees}"></td>
+            <td th:text="${lan.duration}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

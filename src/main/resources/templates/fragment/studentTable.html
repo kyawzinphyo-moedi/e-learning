@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="../../static/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+        th:href="@{/bootstrap/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container container-fluid" th:fragment="studentTable">
+  <table class="table table-bordered text-dark">
+    <thead class="thead-dark">
+    <tr>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Age</th>
+      <th>Country</th>
+      <th>City</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="stu:${student}">
+      <td th:text="${stu.firstName}"></td>
+      <td th:text="${stu.lastName}"></td>
+      <td th:text="${stu.email}"></td>
+      <td th:text="${stu.password}"></td>
+      <td th:text="${stu.age}"></td>
+      <td th:text="${stu.country}"></td>
+      <td th:text="${stu.city}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
